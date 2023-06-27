@@ -1,0 +1,38 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+
+        var nomes = [];
+        var notas1 = [];
+        var notas2 = [];
+
+        for (var i = 0; i < 5; i++) {
+            var nome = prompt("Digite o nome do aluno " + (i + 1));
+            var nota1 = parseFloat(prompt("Digite a primeira nota do aluno " + (i + 1)));
+            var nota2 = parseFloat(prompt("Digite a segunda nota do aluno " + (i + 1)));
+
+            nomes.push(nome);
+            notas1.push(nota1);
+            notas2.push(nota2);
+        }
+
+        for (var i = 0; i < nomes.length; i++) {
+            var media = (notas1[i] + notas2[i]) / 2;
+            document.write("Aluno: " + nomes[i] + "<br>");
+            document.write("Nota 1: " + notas1[i] + "<br>");
+            document.write("Nota 2: " + notas2[i] + "<br>");
+            document.write("Média: " + media.toFixed(2) + "<br><br>");
+        }
+
+
+    </script>
+</body>
+
+</html>

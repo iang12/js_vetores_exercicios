@@ -1,0 +1,32 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+
+        var nomes = [];
+        var notas = [];
+
+        for (var i = 0; i < 5; i++) {
+            var nome = prompt("Digite o nome do aluno " + (i + 1));
+            var nota = parseFloat(prompt("Digite a nota do aluno " + (i + 1)));
+
+            nomes.push(nome);
+            notas.push(nota);
+        }
+        document.write("Alunos com nota maior que 5.0 são ");
+        for (var i = 0; i < nomes.length; i++) {
+            if (notas[i] > 5.0) {
+                document.write(nomes[i] + " ");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

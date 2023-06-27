@@ -1,0 +1,32 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        function encontrarIndice(vetor, numero) {
+            var indices = vetor.reduce(function (acc, element, index) {
+                if (element === numero) {
+                    acc.push(index);
+                }
+                return acc;
+            }, []);
+
+            if (indices.length > 0) {
+                document.write("O número " + numero + " aparece nos índices: " + indices.join(", "));
+            } else {
+                document.write("O número " + numero + " não foi encontrado no vetor.");
+            }
+        }
+        var vetor = [8, 5, 3, 8, 7, 9, 8];
+        var numero = 8;
+        encontrarIndice(vetor, numero);
+
+    </script>
+</body>
+
+</html>

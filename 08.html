@@ -1,0 +1,31 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        function encontrarIndice(colecao) {
+            var indice = colecao.findIndex(function (elemento) {
+                return elemento < 0;
+            });
+
+            return indice !== -1 ? indice : -1;
+        }
+
+        // Exemplo de uso da função
+        var numeros = [2, 4, -3, 7, -1, 9];
+        var indiceNegativo = encontrarIndice(numeros);
+
+        if (indiceNegativo !== -1) {
+            document.write("O primeiro número negativo está no índice: " + indiceNegativo);
+        } else {
+            document.write("Nenhum número negativo foi encontrado.");
+        }
+    </script>
+</body>
+
+</html>

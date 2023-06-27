@@ -1,0 +1,36 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        var notas = [];
+
+        for (var i = 0; i < 80; i++) {
+            var nota = parseFloat(prompt("Digite a nota do aluno " + (i + 1)));
+            notas.push(nota);
+        }
+
+
+        document.write("Notas dos alunos:<br>");
+        for (var i = 0; i < notas.length; i++) {
+            document.write("Aluno " + (i + 1) + ": " + notas[i] + "<br>");
+        }
+
+
+        var soma = 0;
+        for (var i = 0; i < notas.length; i++) {
+            soma += notas[i];
+        }
+        var media = soma / notas.length;
+
+        document.write("<br>Média da turma: " + media.toFixed(2));
+
+    </script>
+</body>
+
+</html>

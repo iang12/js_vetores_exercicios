@@ -1,0 +1,28 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        var quantidade = parseInt(prompt("Quantos números deseja inserir?"));
+
+        var numeros = [];
+
+        for (var i = 0; i < quantidade; i++) {
+            var numero = parseInt(prompt("Digite o número " + (i + 1)));
+            numeros.push(numero);
+        }
+
+        document.write(numeros.join(", ") + "<br>");
+        var numerosReversos = numeros.slice().reverse();
+
+        document.write(numerosReversos.join(", "));
+
+    </script>
+</body>
+
+</html>
