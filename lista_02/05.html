@@ -1,0 +1,38 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+
+        function calcParcelas(valorCompra, numParcelas) {
+            var valorParcela = Math.floor(valorCompra / numParcelas);
+            var resto = valorCompra % numParcelas;
+            var parcelas = [];
+
+            for (var i = 0; i < resto; i++) {
+                parcelas.push(valorParcela + 1);
+            }
+
+            for (var i = resto; i < numParcelas; i++) {
+                parcelas.push(valorParcela);
+            }
+
+            return parcelas;
+        }
+
+        var valorCompra = 45;
+        var numParcelas = 7;
+
+        var parcelas = calcParcelas(valorCompra, numParcelas);
+        console.log(parcelas);
+
+
+    </script>
+</body>
+
+</html>
