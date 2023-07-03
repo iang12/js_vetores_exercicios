@@ -1,0 +1,49 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        function converterHorario(horas, minutos) {
+            let periodo = 'A.M.';
+
+            if (horas >= 12) {
+                periodo = 'P.M.';
+            }
+
+            horas = horas % 12;
+            if (horas === 0) {
+                horas = 12;
+            }
+
+            return [horas, minutos, periodo];
+        }
+
+        function exibirHorario(horas, minutos, periodo) {
+            document.write(`Horário convertido: ${horas}:${minutos.toString().padStart(2, '0')} ${periodo}`);
+        }
+
+        function programa() {
+            let repetir = true;
+
+            while (repetir) {
+                const horas = Number(prompt("Digite as horas (formato 24 horas):"));
+                const minutos = Number(prompt("Digite os minutos:"));
+
+                const [horasConvertidas, minutosConvertidos, periodo] = converterHorario(horas, minutos);
+                exibirHorario(horasConvertidas, minutosConvertidos, periodo);
+
+                const resposta = prompt("Deseja converter outro horário? (S/N)").toUpperCase();
+                repetir = resposta === 'S';
+            }
+        }
+        programa();
+
+    </script>
+</body>
+
+</html>

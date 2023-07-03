@@ -1,0 +1,38 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        function exibirData(dia, mes, ano) {
+            const meses = [
+                "janeiro",
+                "fevereiro",
+                "março",
+                "abril",
+                "maio",
+                "junho",
+                "julho",
+                "agosto",
+                "setembro",
+                "outubro",
+                "novembro",
+                "dezembro"
+            ];
+
+            const data = new Date(ano, mes - 1, dia);
+            const diaPorExtenso = data.getDate();
+            const mesPorExtenso = meses[data.getMonth()];
+            const anoPorExtenso = data.getFullYear();
+
+            document.write(`${diaPorExtenso} de ${mesPorExtenso} de ${anoPorExtenso}`);
+        }
+        exibirData(1, 4, 2023);
+    </script>
+</body>
+
+</html>

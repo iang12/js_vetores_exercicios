@@ -1,0 +1,43 @@
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <script>
+        function lancamentos(numeroLancamentos) {
+            const frequencia = {
+                1: 0,
+                2: 0,
+                3: 0,
+                4: 0,
+                5: 0,
+                6: 0
+            };
+
+            for (let i = 0; i < numeroLancamentos; i++) {
+                const resultadoLancamento = Math.ceil(Math.random() * 6);
+                frequencia[resultadoLancamento]++;
+            }
+
+            return frequencia;
+        }
+
+
+        const frequenciaLancamentos = lancamentos(1000000);
+
+        for (let numero in frequenciaLancamentos) {
+            const frequencia = frequenciaLancamentos[numero];
+            const percentual = (frequencia / 1000000) * 100;
+
+            document.write(`Número ${numero}: Frequência ${frequencia} (${percentual.toFixed(2)}%)` + '<br>');
+        }
+
+
+    </script>
+</body>
+
+</html>
